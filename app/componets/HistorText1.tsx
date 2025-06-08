@@ -16,4 +16,5 @@ function HistorText1() {
     </div>
   );
 }
+
 export default HistorText1;

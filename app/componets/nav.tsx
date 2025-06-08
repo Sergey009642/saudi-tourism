@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Link from "next/link";
 import { useState } from "react";
@@ -21,84 +21,83 @@ function Nav() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="bg-transparent max-w-[1440px] mx-auto px-4">
-  {/* Desktop menu */}
-  <ul className="hidden md:flex justify-center items-center gap-10 lg:gap-14">
-    {bars.map((bar) => (
-      <li
-        key={bar.id}
-        className="
-          cursor-pointer text-white
-          text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]
-          hover:underline
-          whitespace-nowrap
-        "
-      >
-        <Link href={bar.slug}>
-          <strong>{bar.name}</strong>
-        </Link>
-      </li>
-    ))}
-  </ul>
+    <nav className="bg-transparent max-w-[1440px] mx-auto px-4 relative">
+      {/* Desktop menu */}
+      <ul className="hidden md:flex justify-center items-center gap-10 lg:gap-14">
+        {bars.map((bar) => (
+          <li
+            key={bar.id}
+            className="
+              cursor-pointer text-white
+              text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]
+              hover:underline
+              whitespace-nowrap
+            "
+          >
+            <Link href={bar.slug}>
+              <strong>{bar.name}</strong>
+            </Link>
+          </li>
+        ))}
+      </ul>
 
-  {/* Mobile burger menu */}
-  <div className="md:hidden flex justify-between items-center py-3">
-    <button
-      onClick={toggleMenu}
-      aria-label="Toggle menu"
-      className="text-white focus:outline-none"
-    >
-      {/* Hamburger icon */}
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {menuOpen ? (
-          // Close icon (X)
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M6 18L18 6M6 6l12 12"
-          />
-        ) : (
-          // Hamburger icon (3 lines)
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        )}
-      </svg>
-    </button>
-  </div>
-
-  {/* Mobile menu dropdown */}
-  {menuOpen && (
-    <ul className="md:hidden bg-black bg-opacity-90 absolute top-full left-0 right-0 flex flex-col items-center gap-6 py-6 z-50">
-      {bars.map((bar) => (
-        <li
-          key={bar.id}
-          className="
-            cursor-pointer text-white
-            text-[18px] sm:text-[20px]
-            hover:underline
-            whitespace-nowrap
-          "
+      {/* Mobile burger menu */}
+      <div className="md:hidden flex justify-between items-center py-3">
+        <button
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          className="text-white focus:outline-none"
         >
-          <Link href={bar.slug} onClick={() => setMenuOpen(false)}>
-            <strong>{bar.name}</strong>
-          </Link>
-        </li>
-      ))}
-    </ul>
-  )}
-</nav>
+          {/* Hamburger icon */}
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {menuOpen ? (
+              // Close icon (X)
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              // Hamburger icon (3 lines)
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
 
+      {/* Mobile menu dropdown */}
+      {menuOpen && (
+        <ul className="md:hidden bg-black bg-opacity-90 absolute top-full left-0 right-0 flex flex-col items-center gap-6 py-6 z-50">
+          {bars.map((bar) => (
+            <li
+              key={bar.id}
+              className="
+                cursor-pointer text-white
+                text-[18px] sm:text-[20px]
+                hover:underline
+                whitespace-nowrap
+              "
+            >
+              <Link href={bar.slug} onClick={() => setMenuOpen(false)}>
+                <strong>{bar.name}</strong>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
   );
 }
 
