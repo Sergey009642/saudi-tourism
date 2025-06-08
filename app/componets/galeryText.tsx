@@ -6,7 +6,7 @@ function GaleryText() {
           About Us
         </h1>
         <p className="text-white text-[16px] sm:text-[18px] mt-4 max-w-xl mx-auto">
-          Discover the country's hidden gems and breathtaking landscapes
+          Discover the countrys hidden gems and breathtaking landscapes
         </p>
       </div>
     </div>
