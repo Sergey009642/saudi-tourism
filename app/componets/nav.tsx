@@ -78,25 +78,28 @@ function Nav() {
       </div>
 
       {/* Mobile menu dropdown */}
-      {menuOpen && (
-        <ul className="md:hidden bg-black bg-opacity-90 absolute top-full left-0 right-0 flex flex-col items-center gap-6 py-6 z-50">
-          {bars.map((bar) => (
-            <li
-              key={bar.id}
-              className="
-                cursor-pointer text-white
-                text-[18px] sm:text-[20px]
-                hover:underline
-                whitespace-nowrap
-              "
-            >
-              <Link href={bar.slug} onClick={() => setMenuOpen(false)}>
-                <strong>{bar.name}</strong>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+   {menuOpen && (
+  <div
+    className="md:hidden fixed inset-0 bg-[#00000096] bg-opacity-90 z-50 flex flex-col justify-center items-center h-[200px]"
+    onClick={() => setMenuOpen(false)} // Սեղմում ենք ֆոնի վրա՝ փակում
+  >
+    <ul
+      className="flex flex-col items-center gap-6"
+      onClick={(e) => e.stopPropagation()} // Սա կանխում է՝ մենյուի վրա սեղմելը չփակի
+    >
+      {bars.map((bar) => (
+        <li
+          key={bar.id}
+          className="cursor-pointer text-white text-[18px] sm:text-[20px] hover:underline whitespace-nowrap"
+        >
+          <Link href={bar.slug} onClick={() => setMenuOpen(false)}>
+            <strong>{bar.name}</strong>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
     </nav>
   );
 }

@@ -19,7 +19,7 @@ export default function CardSliderSection() {
           key={idx}
           className="
             w-full 
-            max-w-[729px] 
+            max-w-[629px] 
             h-[400px] 
             md:h-[531px] 
             bg-cover bg-center rounded-xl flex items-end

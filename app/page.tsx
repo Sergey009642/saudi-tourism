@@ -9,19 +9,18 @@ import ImageSlider from "./componets/swipwerSaudArab";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1440px] w-full space-y-10 sm:space-y-16">
+    <div className="flex justify-center items-center">
+      <div className="max-w-[1440px] w-full">
         <ImgesSaud />
-
         <div className="flex justify-center pt-16 pb-8">
-          <SaudianLogo />
+          <SaudianLogo/>
         </div>
 
-        <div className="pt-20 pb-16 text-center">
-          <PrzdText />
+        <div className="pt-[30px] pb-[30px] text-center">
+          <PrzdText/>
         </div>
 
-        <PrzdOpshi />
+        <PrzdOpshi/>
 
         <DestBgImges />
 

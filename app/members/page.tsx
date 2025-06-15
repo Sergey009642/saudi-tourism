@@ -9,8 +9,8 @@ import TravelText from "../componets/TravelText";
 
 function Home() {
   return (
-    <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1440px] w-full space-y-12 sm:space-y-16">
+    <div className="flex justify-center items-center">
+      <div className="max-w-[1440px] w-full ">
         <MembFon />
 
         <div className="pt-12 sm:pt-16">
