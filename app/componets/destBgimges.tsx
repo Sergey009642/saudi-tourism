@@ -20,11 +20,13 @@ function DestBgImges() {
 
       {/* Կոնտենտը՝ պատկերի վրա */}
       <div
-        className="relative flex flex-col md:flex-row justify-between items-center
+        className="relative flex  justify-between items-center
           px-6 md:px-20
           pt-[500px] md:pt-[700px] lg:pt-[830px]
           max-xl:pt-[450px] max-lg:pt-[400px] max-md:pt-[350px] max-sm:pt-[300px]
-          text-white"
+          text-white 
+          md:flex md:flex-col md:gap-[40px]
+          "
       >
         <div className="flex flex-col items-center md:items-start gap-4">
           <img
@@ -42,7 +44,7 @@ function DestBgImges() {
           </h1>
         </div>
 
-        <div className="flex items-center gap-4 md:gap-6">
+        <div className="flex items-center">
           <img
             src="/przd1Logo1.png"
             alt="Jonatan Pie"

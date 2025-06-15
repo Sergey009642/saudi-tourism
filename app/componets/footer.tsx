@@ -54,7 +54,7 @@ function Footer() {
 
   return (
     <footer className="bg-[#222222] w-full py-12 flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col md:flex-row justify-between items-start md:items-center px-6 gap-10 md:gap-40">
+      <div className="max-w-[1440px] w-full flex max-md:flex max-md:flex-col justify-center items-center">
         <HeadLogo />
         <div className="flex flex-col sm:flex-row gap-10 sm:gap-20">
           {renderSection(aboutData)}

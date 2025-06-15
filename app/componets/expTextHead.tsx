@@ -5,7 +5,7 @@ function ExpTextHead() {
         <h1
           className="text-white font-extrabold leading-tight
             text-[60px] sm:text-[80px] lg:text-[98px]
-            max-lg:text-[68px] max-md:text-[56px] max-sm:text-[44px] max-[320px]:text-[36px]"
+            max-lg:text-[68px] max-md:text-[46px] max-sm:text-[40px] max-[320px]:text-[36px]"
         >
           Explore
           <br />
