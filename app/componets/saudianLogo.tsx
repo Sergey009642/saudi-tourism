@@ -5,7 +5,7 @@ function SaudianLogo() {
         <div className="flex justify-center items-center gap-[30px] max-lg:flex-wrap">
          {imges.map((src, index) => (
           <img key={index} src={src} alt="logoSaoud"
-          className="max-sm:w-[200px]"
+          className="w-[200px]"
           />
           ))}
         </div>
