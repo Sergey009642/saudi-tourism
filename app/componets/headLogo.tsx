@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function HeadLogo() {
   return (
     <div>
-      <a href="/">
+      <Link href="/">
         <Image
           src="/Frame.png"
           alt="Logo"
@@ -11,7 +12,7 @@ function HeadLogo() {
           height={118}
           priority={true} // Եթե ուզում ես, որ լոգոն արագ լցվի
         />
-      </a>
+      </Link>
     </div>
   );
 }
